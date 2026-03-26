@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Body Canvas Dog</title>
+</head>
+<body>
+
+<h2>HTML5 Canvas Dog (Full Body)</h2>
+
+<canvas id="myCanvas" width="600" height="450"
+        style="border:1px solid black;">
+
+</canvas>
+
+<script>
+window.onload = function() {
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    // ===== BODY =====
+    ctx.beginPath();
+    ctx.ellipse(300, 300, 120, 70, 0, 0, Math.PI * 2);
+    ctx.fillStyle = "brown";
+    ctx.fill();
+    ctx.stroke();
+
+    // ===== HEAD =====
+    ctx.beginPath();
+    ctx.arc(300, 180, 70, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.stroke();
+
+    // ===== LEFT EAR =====
+    ctx.beginPath();
+    ctx.moveTo(250,130);
+    ctx.lineTo(220,70);
+    ctx.lineTo(280,130);
+    ctx.fill();
+    ctx.stroke();
+
+    // ===== RIGHT EAR =====
+    ctx.beginPath();
+    ctx.moveTo(350,130);
+    ctx.lineTo(380,70);
+    ctx.lineTo(320,130);
+    ctx.fill();
+    ctx.stroke();
+
+    // ===== EYES =====
+    ctx.beginPath();
+    ctx.arc(275,170,8,0,Math.PI*2);
+    ctx.arc(325,170,8,0,Math.PI*2);
+    ctx.fillStyle="black";
+    ctx.fill();
+
+    // ===== NOSE =====
+    ctx.beginPath();
+    ctx.arc(300,200,12,0,Math.PI*2);
+    ctx.fill();
+
+    // ===== MOUTH =====
+    ctx.beginPath();
+    ctx.moveTo(300,212);
+    ctx.lineTo(285,230);
+    ctx.moveTo(300,212);
+    ctx.lineTo(315,230);
+    ctx.stroke();
+
+    // ===== LEGS =====
+    ctx.fillStyle="brown";
+
+    ctx.fillRect(240,350,30,70); // left front
+    ctx.fillRect(300,350,30,70); // right front
+    ctx.fillRect(330,350,30,70); // right back
+    ctx.fillRect(210,350,30,70); // left back
+
+    // ===== TAIL =====
+    ctx.beginPath();
+    ctx.moveTo(420,280);
+    ctx.lineTo(480,240);
+    ctx.lineWidth=8;
+    ctx.strokeStyle="red";
+    ctx.stroke();
+
+};
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
